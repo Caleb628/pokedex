@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "../../pokemon.css";
 const getPokemon = async (name) => {
   const promise = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
 
@@ -48,25 +49,30 @@ const Pokemon = () => {
   }, []);
   console.log(abilities);
   return (
-    <div>
-      <img src={pokemon.image} alt={pokemon.name} />
-      <p>{pokemon.name}</p>
-      <ul>
-        {pokemon.moves.map((move, index) => (
-          <li key={index}>{move.move.name}</li>
-        ))}
-      </ul>
-      <ul>
-        {abilities.map((value) => {
-          return (
-            <li>
-              <h3>{value.name}</h3>
-              <p>{value.description}</p>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <section className="pokedex">
+      <h1>Pokédex</h1>
+      <div className="tela">
+        <div className="telaPokemons">
+          <img src={pokemon.image} alt={pokemon.name} />
+          <p>{pokemon.name}</p>
+          <ul>
+            {pokemon.moves.map((move, index) => (
+              <li key={index}>{move.move.name}</li>
+            ))}
+          </ul>
+          <ul>
+            {abilities.map((value) => {
+              return (
+                <li>
+                  <h3>{value.name}</h3>
+                  <p>{value.description}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 };
 

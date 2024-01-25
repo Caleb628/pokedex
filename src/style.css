@@ -6,16 +6,29 @@
   font-family: sans-serif;
   color: black;
 }
-
+.pokedex {
+  background-color: rgb(200, 30, 30);
+  padding: 40px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pokedex h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+}
 .tela {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: gray;
+  background-color: rgb(169, 169, 169);
   padding: 2rem;
+  border-radius: 20px;
 }
-.telaPokedex {
+.telaPokemons {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -23,22 +36,91 @@
   align-items: center;
   padding: 20px;
   background-color: white;
+  border-radius: 20px;
 }
 /* carta pokemon */
 .pokemonStyle {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+.pokemonStyle .pokemonName {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 .pokemonStyle img {
   background-color: #d0d0d0;
   width: 200px;
 }
+.pokemonStyle ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+.pokemonStyle ul li {
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
 
+.abilities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.abilities p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/* estilo dos tipos */
+.types {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+.types p {
+  font-weight: 400;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+}
 /* button */
+.buttonArea {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
 .pokemonGenerator {
-  width: 200px;
+  width: 45%;
   height: 100px;
-  background-color: white;
-  border: 1px slid black;
-  border-radius: 20px;
+
+  background-color: rgb(158, 14, 14);
+  color: #d0d0d0;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
   font-size: 1.5rem;
+}
+/* botão que muda o tema */
+
+.themeBtn {
+  width: 45%;
+  height: 100px;
+  color: #d0d0d0;
+  background-color: rgb(63, 63, 63);
+  padding: 30px;
+
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: none;
 }
